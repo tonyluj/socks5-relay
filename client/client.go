@@ -280,7 +280,6 @@ func (c *Client) connect(dst, src net.Conn) (err error) {
 				if n > 0 {
 					dst.Write(b[:n])
 				}
-
 				if err != nil {
 					errChan <- err
 					continue
@@ -307,7 +306,6 @@ func (c *Client) connect(dst, src net.Conn) (err error) {
 				if n > 0 {
 					src.Write(b[:n])
 				}
-
 				if err != nil {
 					errChan <- err
 					continue
